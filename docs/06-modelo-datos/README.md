@@ -693,3 +693,9 @@ Para la versión 1.0 se trabajará principalmente con tres estructuras:
 Los datos serán representados mediante objetos y arrays de JavaScript y almacenados mediante `localStorage`.
 
 El modelo podrá evolucionar cuando el proyecto incorpore backend y una base de datos real.
+
+## Diagrama del modelo de datos
+
+El siguiente diagrama representa el modelo conceptual utilizado por la versión 1.0 del sistema, compuesto por Usuario, Sesión y Producto, junto con su persistencia mediante localStorage.
+
+![Modelo de datos](./diagramas/modelo-datos-v1.png)
