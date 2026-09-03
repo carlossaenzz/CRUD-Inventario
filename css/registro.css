@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+/* configuración global */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* contenedor principal */
+.register__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #3498db, #8e44ad);
+    padding: 24px 16px;
+}
+
+/* formulario de registro */
+.register__form {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* título del formulario */
+.register__title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/* campos del formulario */
+.register__field {
+    margin-bottom: 20px;
+}
+
+/* etiquetas de los campos */
+.register__label {
+    display:block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+/*contenedor input y icono */
+.register__control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 6px 12px;
+    background-color: #f9f9f9;
+    gap: 10px;
+}
+
+/* estado cuando el usuario interactúa con el campo */
+.register__control:focus-within {
+    border-color: #3498db;
+}
+
+/* estilos del input */
+.register__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    min-width: 0; /* Evita que el input se desborde del contenedor */
+    font-family: inherit;
+    font-size: 16px;
+    background-color: transparent;
+    color: #333;
+}
+
+/*placeholder del input */
+.register__input::placeholder {
+    color: #999;
+
+}
+
+/* estilos del icono */
+.register__icon {
+    font-size: 20px;
+    color: #aaa;
+    flex-shrink: 0; /* Evita que el icono se reduzca de tamaño */
+    margin-left: 5px; /* Espacio entre el icono y el borde del input */
+}
+
+/* botón de registro */
+.register__button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: inherit; /* Mantener la fuente consistente */
+    font-weight: 600;
+    cursor: pointer;
+}   
+
+.register__button:hover {
+    background-color: #35759f;
+}   
+
+/* enlace de inicio de sesión */
+.register__link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.register__link a {
+    color: #3498db;
+    text-decoration: none;  
+}
+
+.register__link a:hover {
+    text-decoration: underline;
+}
+
+/*! Adaptación para pantallas pequeñas */
+@media (max-width: 680px) {
+    .register__form {
+        padding: 24px 20px;
+    }
+
+    .register__title {
+        font-size: 23px;
+    }
+}
+
+
+
+
+
+
+
+
