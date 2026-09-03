@@ -42,7 +42,7 @@ Desarrollar un sistema web de gestión de inventarios que permita administrar pr
 
 ## 6. Objetivos específicos
 
-* Implementar un sistema de inicio de sesión.
+* Implementar un sistema de registro e inicio de sesión que permita crear cuentas de usuario y acceder al sistema mediante credenciales.
 * Diseñar un panel principal para acceder a las funciones del sistema.
 * Permitir registrar nuevos productos.
 * Mostrar los productos almacenados.
@@ -63,6 +63,7 @@ Usuario con acceso a las funciones principales del sistema.
 
 Podrá:
 
+* Registrar una cuenta
 * Iniciar sesión.
 * Registrar productos.
 * Consultar productos.
@@ -82,6 +83,7 @@ Usuario que podrá consultar información del inventario y realizar determinadas
 
 La primera versión funcional del sistema incluirá:
 
+* Registro de cuenta
 * Inicio y cierre de sesión.
 * Dashboard o panel principal.
 * Registro de productos.
