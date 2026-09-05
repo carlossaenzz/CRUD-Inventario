@@ -11,13 +11,32 @@ if (registerForm) {
 
         const nombre = document.getElementById('nombre').value.trim();
         const email = document.getElementById('email').value.trim();
-        const username = document.getElementById('username').value.trim();
+        const username = document.getElementById('usuario').value.trim();
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirmPassword').value;
 
-        console.log("Nombre:", nombre);
-        console.log("Correo:", email);
-        console.log("Username:", username);
-        console.log("Las contraseñas coinciden:", password === confirmPassword);
+        // Validamos que las contraseñas coincidan
+        if (password !== confirmPassword) {
+            console.error("Las contraseñas no coinciden.");
+            return;
+        }
+
+        // Creamos un objeto usuario con los datos del formulario
+        const usuario = {
+            id: Date.now(),
+            nombre: nombre,
+            email: email,
+            username: username,
+            password: password,
+            rol: "administrador",
+            fechaRegistro: new Date().toISOString()
+        };
+
+
+        console.log("Usuario creado correctamente.")
+        console.log("Nombre:", usuario.nombre);
+        console.log("Correo:", usuario.email);
+        console.log("Username:", usuario.username);
+
     });
 }
