@@ -1,13 +1,13 @@
-// *lógica de registro y autenticación de usuarios
-// buscamos el formulario de registro por su ID
+// *Lógica de registro y autenticación de usuarios
+// Buscamos el formulario de registro por su ID
 const registerForm = document.getElementById('registerForm');
 
-// if evita errores si el formulario no existe en la página
-// si existe el formulario, agregamos un listener para el evento submit
+// If evita errores si el formulario no existe en la página
+// Si existe el formulario, agregamos un listener para el evento submit
 if (registerForm) {
-    // formulario de registro, escucha el evento submit y cuando ocurra ejecuta esta función
+    // Formulario de registro, escucha el evento submit y cuando ocurra ejecuta esta función
     registerForm.addEventListener("submit", function (event) {
-        // prevenimos el comportamiento por defecto del formulario (recargar la página)
+        // Prevenimos el comportamiento por defecto del formulario (recargar la página)
         event.preventDefault();
 
         const nombre = document.getElementById('nombre').value.trim();
@@ -22,7 +22,33 @@ if (registerForm) {
             return;
         }
 
-        // Creamos un objeto usuario con los datos del formulario
+        // Obtenemos los usuarios que ya existen en localStorage usando la función definida en storage.js
+        const usuarios = obtenerUsuarios();
+
+        // Verificamos si el correo electrónico ya está registrado
+        const emailExistente = usuarios.find(function (usuario) {
+            return usuario.email.toLowerCase() === email.toLowerCase();
+        });
+
+        // Si el correo electrónico ya existe, mostramos un mensaje de error y detenemos el proceso
+        if (emailExistente) {
+            console.error("El correo electrónico ya está registrado.");
+            return;
+        }
+
+        // Verificamos si el nombre de usuario ya está registrado
+        const usernameExistente = usuarios.find(function (usuario) {
+            return usuario.username.toLowerCase() === username.toLowerCase();
+        });
+
+        // Si el nombre de usuario ya está registrado, mostramos un mensaje de error y detenemos el proceso
+        if (usernameExistente) {
+            console.error("El nombre de usuario ya está registrado.");
+            return;
+        }
+
+        // Creamos objeto usuario con los datos del formulario y lo guardamos en localStorage
+        // Si todo está bien, creamos un nuevo objeto de usuario con los datos proporcionados
         const usuario = {
             id: Date.now(),
             nombre: nombre,
@@ -33,11 +59,19 @@ if (registerForm) {
             fechaRegistro: new Date().toISOString()
         };
 
+        // Agregamos el nuevo usuario al arreglo de usuarios existente
+        usuarios.push(usuario);
+
+        // Guardamos el arreglo actualizado de usuarios en localStorage usando la función definida en storage.js
+        guardarUsuario(usuarios);
+
 
         console.log("Usuario creado correctamente.")
         console.log("Nombre:", usuario.nombre);
         console.log("Correo:", usuario.email);
         console.log("Username:", usuario.username);
+
+        registerForm.reset(); // Limpiamos el formulario después de registrar al usuario
 
     });
 }
