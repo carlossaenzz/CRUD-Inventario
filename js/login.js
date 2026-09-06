@@ -1,3 +1,4 @@
+// *lógica de registro y autenticación de usuarios
 // buscamos el formulario de registro por su ID
 const registerForm = document.getElementById('registerForm');
 
