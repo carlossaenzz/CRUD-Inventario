@@ -2,12 +2,16 @@
 // Buscamos el formulario de registro por su ID
 const registerForm = document.getElementById('registerForm');
 
+// -----------------------
+// Registro de usuarios
+// -----------------------
+// Ejecutamos la logica de registro solo si el formulario de registro existe en la página
 // If evita errores si el formulario no existe en la página
 // Si existe el formulario, agregamos un listener para el evento submit
 if (registerForm) {
     // Formulario de registro, escucha el evento submit y cuando ocurra ejecuta esta función
     registerForm.addEventListener("submit", function (event) {
-        // Prevenimos el comportamiento por defecto del formulario (recargar la página)
+        // Evitamos que el formulario se envíe y recargue la página
         event.preventDefault();
 
         const nombre = document.getElementById('nombre').value.trim();
@@ -74,4 +78,44 @@ if (registerForm) {
         registerForm.reset(); // Limpiamos el formulario después de registrar al usuario
 
     });
+}
+
+// ------------------
+// Inicio de sesión
+// ------------------
+// Buscamos el formulario de login por su ID
+const loginForm = document.getElementById('loginForm');
+
+// Ejecutamos el código solo si el formulario de login existe en la página
+if (loginForm) {
+    // Formulario de login, escucha el evento submit y cuando ocurra ejecuta esta función
+    loginForm.addEventListener("submit", function (event) {
+        // Evita que el formulario se envíe y recargue la página
+        event.preventDefault();
+
+        // Obtenemos los datos ingresados por el usuario en los campos de usuario y contraseña
+        const username = document.getElementById('usuario').value.trim();
+        const password = document.getElementById('password').value.trim();
+
+        // Obtenemos todos los usuarios registrados desde localStorage usando la función definida en storage.js
+        const usuarios = obtenerUsuarios();
+
+        // Buscamos un usuario que coincida con el nombre de usuario y la contraseña ingresados
+        const usuarioEncontrado = usuarios.find(function (usuario) {
+            return usuario.username.toLowerCase() === username.toLowerCase() && usuario.password === password
+        });
+
+        // Si no se encuentra un usuario que coincida, mostramos un mensaje de error y detenemos el proceso
+        if (!usuarioEncontrado) {
+            // Si no se encuentra un usuario que coincida, mostramos un mensaje de error
+            console.error("Usuario o contraseña incorrectos.");
+            return;
+        }
+
+        // Si se encuentra un usuario que coincida, mostramos un mensaje de éxito y redirigimos a la página principal
+        console.log("Inicio de sesión exitoso. Bienvenido, " + usuarioEncontrado.nombre + "!");
+
+
+    });
+
 }
