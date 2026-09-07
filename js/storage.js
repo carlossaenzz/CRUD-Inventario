@@ -3,6 +3,9 @@
 // Clave con la que identificaremos nuestra información en el almacenamiento local del navegador
 const USERS_KEY = 'crudInventario_usuarios';
 
+// Clave utilizada para almacenar el usuario actualmente logueado
+const SESSION_KEY = 'crudInventario_sesion';
+
 // function que obtiene todos los ususarios almacenados en localStorage
 function obtenerUsuarios() {
     const usuariosGuardados = localStorage.getItem(USERS_KEY);
@@ -24,4 +27,12 @@ function guardarUsuario(usuarios) {
 
     // guardamos el arreglo de usuarios en localStorage bajo la clave definida
     localStorage.setItem(USERS_KEY, usuariosJSON);
+}
+
+// Function que guarda la sesión del usuario logueado en localStorage
+function guardarSesion(sesion) {
+    // Convertimos el objeto sesion a un string JSON para poder almacenarlo en localStorage
+    const sesionJSON = JSON.stringify(sesion);
+    // Guardamos la sesión en localStorage bajo la clave definida
+    localStorage.setItem(SESSION_KEY, sesionJSON);
 }

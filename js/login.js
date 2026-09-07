@@ -112,6 +112,16 @@ if (loginForm) {
             return;
         }
 
+        // Si se encuentra un usuario que coincida, creamos un objeto de sesión con la información del usuario logueado
+        const sesion = {
+            usuarioId: usuarioEncontrado.id,
+            username: usuarioEncontrado.username,
+            fechaInicio: new Date().toISOString()
+        };
+
+        // Guardamos la sesión del usuario logueado en localStorage usando la función definida en storage.js
+        guardarSesion(sesion);
+
         // Si se encuentra un usuario que coincida, mostramos un mensaje de éxito y redirigimos a la página principal
         console.log("Inicio de sesión exitoso. Bienvenido, " + usuarioEncontrado.nombre + "!");
 
