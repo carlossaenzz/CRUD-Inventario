@@ -10,7 +10,7 @@ const SESSION_KEY = 'crudInventario_sesion';
 function obtenerUsuarios() {
     const usuariosGuardados = localStorage.getItem(USERS_KEY);
 
-    // si existen datos, los convierte nuevamente a un arreglo de javascript
+    // si existen datos guardados, los convierte nuevamente a un arreglo de javascript
     if (usuariosGuardados) {
         return JSON.parse(usuariosGuardados);
     }
@@ -35,4 +35,16 @@ function guardarSesion(sesion) {
     const sesionJSON = JSON.stringify(sesion);
     // Guardamos la sesión en localStorage bajo la clave definida
     localStorage.setItem(SESSION_KEY, sesionJSON);
+}
+
+// Function que obtiene la sesión activa almacenada en localStorage
+function obtenerSesion() {
+    // Obtiene la sesión alamacenada como texto JSON desde localStorage usando la clave definida
+    const sesionGuardada = localStorage.getItem(SESSION_KEY);
+    // Si no existe niguna sesión guardada, retorna null
+    if (!sesionGuardada) {
+        return null;
+    }
+    // Convierte el texto JSON nuevamente en un objeto de JavaScript y lo retorna
+    return JSON.parse(sesionGuardada);
 }

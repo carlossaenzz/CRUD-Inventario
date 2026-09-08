@@ -125,7 +125,26 @@ if (loginForm) {
         // Si se encuentra un usuario que coincida, mostramos un mensaje de éxito y redirigimos a la página principal
         console.log("Inicio de sesión exitoso. Bienvenido, " + usuarioEncontrado.nombre + "!");
 
+        // Redirige al dashboard después de inicar sesión
+        window.location.href = "./pages/dashboard.html";
 
     });
+}
 
+// ---------------------------
+// Protección del dashboard
+// ---------------------------
+// Verifica que exista una sesión activa antes de permitir el acceso al dashboard.
+// Si no existe una sesión, redirige al usuario al formulario de inicio de sesión.
+// buscamos la pagina del dashboard por su ID
+const dashboardPage = document.getElementById("dashboardPage");
+
+// Si estamos en la pagina del dashboard ejecuta esta lógica
+if (dashboardPage) {
+    // Obtiene la sesión activa almacenada
+    const sesion = obtenerSesion();
+    // Si no existe una esión, impide el acceso al dashboard
+    if (!sesion) {
+        window.location.href = "../index.html";
+    }
 }
