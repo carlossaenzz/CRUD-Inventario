@@ -65,26 +65,32 @@ Podrá:
 
 * Registrar una cuenta
 * Iniciar sesión.
+* Cerrar sesión
 * Registrar productos.
 * Consultar productos.
 * Editar productos.
 * Eliminar productos.
-* Buscar productos.
+* Buscar productos por nombre o código.
 * Consultar cantidades disponibles.
+* Visualizar categorías
 * Visualizar alertas de stock bajo.
 
 ### Empleado
 
 Usuario que podrá consultar información del inventario y realizar determinadas operaciones según los permisos que se definan durante la evolución del proyecto.
 
-> En la primera versión se desarrollará principalmente el flujo del administrador. La gestión completa de roles y permisos podrá evolucionar en versiones posteriores.
+> En la versión 1.0 se desarrollará principalmente el flujo del administrador. La gestión completa de roles y permisos podrá evolucionar en versiones posteriores.
 
 ## 8. Alcance de la versión 1.0
 
 La primera versión funcional del sistema incluirá:
 
-* Registro de cuenta
-* Inicio y cierre de sesión.
+* Registro de usuarios
+* Inicio de sesión con usuarios registrados 
+* cierre de sesión.
+* Detección de correo electronico y nombre de usuario duplicados
+* Validación de credenciales
+* Protección de acceso al dashboard
 * Dashboard o panel principal.
 * Registro de productos.
 * Listado de productos.
@@ -98,6 +104,8 @@ La primera versión funcional del sistema incluirá:
 * Alertas visuales de stock bajo.
 * Validaciones básicas de formularios.
 * Persistencia de información utilizando `localStorage`.
+* Pruebas manuales de las funcionalidades principales.
+* control de versiones git y github.
 
 ## 9. Fuera del alcance de la versión 1.0
 
@@ -111,12 +119,17 @@ Inicialmente no se desarrollarán las siguientes funcionalidades:
 * Nómina.
 * Reportes avanzados.
 * Backend.
+* APIs externas.
+* Node.js.
+* Bases de datos como MySQL o MongoDB
+* Autenticacion mediante servidor.
 * Base de datos remota.
 * Sincronización entre varios computadores.
 * Gestión avanzada de usuarios y permisos.
 * Sistema multiempresa.
+* Aplicación movil.
 
-Estas características podrán analizarse para versiones posteriores.
+Estas características podrán analizarse para versiones posteriores segun la evulución del proyecto.
 
 ## 10. Tecnologías iniciales
 
@@ -131,11 +144,17 @@ Para la primera versión se utilizarán únicamente tecnologías conocidas y fun
 * **Visual Studio Code:** entorno de desarrollo.
 * **Live Server:** ejecución local durante el desarrollo.
 
+Convenciones del proyecto:
+- Se utilizará metodoligía **BEM** para mantener una organización clara y consistente de las clases en HTML y CSS.
+- Se utilizará camelCase para nombres de variables y funciones en JavaScript.
+- Los mensajes de commit se escribirán en **español** y en **modo imperativo**, procurando que describan de forma clara la unidad de trabajo realizada.
+- Los comentarios en el código se escribirán de forma clara y breve, Deberán explicar por qué se realiza una acción o qué responsabilidad tiene una sección del código, evitando comentarios redundantes que solo repitan lo que ya muestra el código.
+
 ## 11. Restricciones iniciales
 
 La versión 1.0 tendrá algunas limitaciones propias de la arquitectura utilizada:
 
-* Los datos estarán almacenados en el navegador.
+* Los datos estarán almacenados en el navegador mediante `localStorage`.
 * La información no estará sincronizada entre diferentes computadores.
 * El sistema inicialmente no contará con un servidor backend.
 * No existirá todavía una base de datos centralizada.
@@ -154,11 +173,11 @@ Aplicación CRUD utilizando HTML, CSS, JavaScript y `localStorage`.
 
 ### Versión 2.0
 
-Incorporación de backend y base de datos.
+Incorporación de backend, API y base de datos centralizada.
 
 ### Versión 3.0
 
-Autenticación real, usuarios y roles.
+Autenticación real mediante servidor, usuarios y roles.
 
 ### Versión 4.0
 
@@ -166,7 +185,7 @@ Gestión de movimientos de entrada y salida de inventario.
 
 ### Versión 5.0
 
-Proveedores, reportes, estadísticas y nuevas funcionalidades empresariales.
+incorporación de proveedores, reportes, estadísticas y nuevas funcionalidades empresariales.
 
 El alcance de cada versión podrá modificarse según los conocimientos adquiridos y las necesidades identificadas durante el desarrollo.
 
@@ -175,5 +194,10 @@ El alcance de cada versión podrá modificarse según los conocimientos adquirid
 ## Estado actual
 
 **Fase:** Análisis y definición del producto.
+* En desarrollo versión 1.0
 
-El proyecto se encuentra actualmente en la etapa inicial de documentación, definición de alcance y organización de los requisitos antes de comenzar la implementación de las funcionalidades principales.
+El proyecto ya cuenta con una base inicial de documentación, definición de visión y alcance, requisitos, casos de uso, historias de usuario y otros elementos de análisis.
+
+Actualmente se encuentra en desarrollo el módulo de autenticación. Ya se ha avanzado en el formulario de login y registro, validación de contraseñas, creación del objeto usuario, almacenamiento de usuarios en localStorage y validación de correo electrónico y nombre de usuario duplicados.
+
+El siguiente paso del proyecto consiste en continuar con el inicio de sesión utilizando los usuarios almacenados, validar las credenciales, crear la sesión de usuario, proteger el acceso al dashboard e implementar el cierre de sesión.
