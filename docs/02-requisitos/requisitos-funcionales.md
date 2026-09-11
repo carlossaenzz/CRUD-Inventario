@@ -36,7 +36,7 @@ Alta.
 
 * El formulario deberá validar los campos obligatorios.
 * El correo electrónico deberá contener un formato válido.
-* El nombre de usuario no deberá estar registrado previamente.
+* El correo electronico no deberá estar registrado previamente.
 * La contraseña y su confirmación deberán coincidir.
 * El sistema no deberá permitir registrar una cuenta con campos obligatorios vacíos.
 * Después de completar correctamente el formulario, la cuenta deberá almacenarse.
@@ -69,6 +69,8 @@ Alta.
 * Las credenciales válidas deberán permitir el acceso al sistema.
 * Las credenciales incorrectas deberán mostrar un mensaje de error.
 * Después de iniciar sesión correctamente, el usuario deberá ser dirigido al dashboard.
+* Después de validar correctamente las credenciales, el sistema deberá crear una sesión para identificar al usuario autenticado.
+* La sesión deberá crearse únicamente cuando las credenciales sean validas.
 
 > En la versión 1.0 la autenticación será implementada con fines de aprendizaje y no representará todavía un sistema de seguridad empresarial definitivo.
 
@@ -90,6 +92,8 @@ Alta.
 
 **Criterios de aceptación:**
 
+* El acceso al dashboard deberá requerir una sesión activa.
+* Si no existe una sesión activa, el usuario deberá se dirigido al a pantalla de inicio de sesión.
 * El dashboard deberá mostrarse después de iniciar sesión.
 * Deberá permitir acceder al módulo de productos.
 * Deberá mostrar información básica relacionada con el inventario.
@@ -327,8 +331,8 @@ Alta.
 
 ## Resumen
 
-La versión 1.0 contempla once requisitos funcionales principales:
+La versión 1.0 incluye doce requisitos funcionales principales:
 
-**RF-01** Inicio de sesión · **RF-02** Dashboard · **RF-03** Registrar productos · **RF-04** Consultar productos · **RF-05** Actualizar productos · **RF-06** Eliminar productos · **RF-07** Buscar productos · **RF-08** Categorías · **RF-09** Control de existencias · **RF-10** Alertas de stock bajo · **RF-11** Cerrar sesión.
+**RF-01**Registrar cuenta de usuario**RF-02** Inicio de sesión · **RF-03** Dashboard · **RF-04** Registrar productos · **RF-05** Consultar productos · **RF-06** Actualizar productos · **RF-07** Eliminar productos · **RF-08** Buscar productos · **RF-09** Categorías · **RF-10** Control de existencias · **RF-11** Alertas de stock bajo · **RF-12** Cerrar sesión.
 
 Estos requisitos constituyen la base funcional que deberá cumplir la primera versión del sistema CRUD Inventario.
