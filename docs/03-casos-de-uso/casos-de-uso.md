@@ -17,7 +17,7 @@ Cada caso de uso se relaciona con uno o varios requisitos funcionales definidos 
 Crear una cuenta que permita posteriormente iniciar sesión en el sistema.
 
 **Precondiciones:**
-El usuario no debe tener una cuenta registrada con el mismo nombre de usuario.
+El usuario no debe tener una cuenta registrada con el mismo nombre de usuario ni con el mismo correo electrónico.
 
 ### Flujo principal
 
@@ -47,6 +47,9 @@ Si el nombre de usuario ya se encuentra registrado, el sistema solicita utilizar
 
 **A4 — Correo inválido**
 Si el formato del correo electrónico no es válido, el sistema informa el error.
+
+**A5 — Correo existente**
+Si el correo electrónico ya se encuentra registrado, el sistema informa al usuario y no realiza el registro.
 
 **Postcondición:**
 La nueva cuenta queda almacenada y disponible para iniciar sesión.
@@ -107,6 +110,12 @@ Debe existir una sesión activa.
 3. El sistema carga la información básica del inventario.
 4. El sistema muestra las opciones disponibles.
 5. El usuario selecciona el módulo que desea utilizar.
+
+### Flujos alternativos
+
+**A1 — Sesion inexistente**
+Si no existe una sesión activa, el sistema impide el acceso al dashboard y dirige al usuario a la pantalla de inicio de sesión.
+
 
 **Postcondición:**
 El usuario puede navegar hacia las diferentes funcionalidades del sistema.
@@ -191,7 +200,7 @@ El usuario visualiza la información actual del inventario.
 Modificar la información de un producto existente.
 
 **Precondiciones:**
-El producto debe existir.
+El usuario debe tener una sesión activa y el producto debe existir.
 
 ### Flujo principal
 
@@ -315,7 +324,7 @@ El producto queda asociado a una categoría.
 Consultar y mantener actualizada la cantidad disponible de cada producto.
 
 **Precondiciones:**
-El producto debe existir.
+El usuario debe tener una sesión activa y el producto debe existir.
 
 ### Flujo principal
 
