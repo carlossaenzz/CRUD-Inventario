@@ -39,14 +39,14 @@ El sistema deberá responder de manera rápida durante las operaciones habituale
 ## RNF-03 — Persistencia
 
 **Descripción:**
-La información de los productos deberá mantenerse almacenada en el navegador mediante `localStorage`.
+La información que requiera persistencia en la versión 1.0, principalmente usuarios y productos, deberá almacenarse localmente mediante `localStorage`.
 
 **Criterios de aceptación:**
 
+* Los usuarios registrados deberán permanecer disponibles después de recargar la aplicación.
 * Los productos registrados deberán permanecer disponibles después de recargar la página.
 * Las modificaciones deberán conservarse después de recargar la aplicación.
 * Los productos eliminados no deberán reaparecer después de recargar.
-* La información deberá mantenerse mientras los datos de `localStorage` no sean eliminados por el usuario o navegador.
 
 ---
 
@@ -70,11 +70,13 @@ El código fuente deberá organizarse de manera que facilite su lectura, modific
 
 **Criterios de aceptación:**
 
+* Las clases de HTML y CSS deberán mantener la metOdología BEM.
 * HTML, CSS y JavaScript deberán mantenerse separados según su responsabilidad.
 * La lógica relacionada con productos deberá organizarse en archivos JavaScript específicos.
-* Los nombres de variables y funciones deberán representar claramente su propósito.
+* Los nombres de variables y funciones deberán representar claramente su propósito y utilizando la convencio cameCase.
 * Se deberá evitar duplicar lógica innecesariamente.
 * La estructura del proyecto deberá mantenerse organizada.
+* Los comentarios deberán utilizarse cuando aporten contexto sobre la intención o responsabilidad del código, evitando repetir innecesariamente lo que ya expresa la implementación.
 
 ---
 
@@ -85,6 +87,7 @@ La versión 1.0 deberá restringir el acceso a las páginas principales mediante
 
 **Criterios de aceptación:**
 
+* La sesión deberá crearse únicamente después de validar correctamente las credenciales del usuario.
 * El usuario deberá iniciar sesión antes de acceder al sistema.
 * Las páginas protegidas deberán comprobar la existencia de una sesión.
 * Cerrar sesión deberá impedir continuar utilizando las páginas protegidas sin volver a autenticarse.
@@ -105,6 +108,7 @@ El sistema deberá validar la información ingresada antes de almacenarla.
 * Los campos numéricos deberán aceptar únicamente valores válidos.
 * No deberán almacenarse productos con códigos duplicados.
 * Los errores de validación deberán comunicarse claramente al usuario.
+* No deberán registrarse usuarios con un correo electrónico o nombre de usuario ya almacenado.
 
 ---
 
@@ -116,7 +120,8 @@ La interfaz deberá conservar su correcta visualización en diferentes tamaños 
 **Criterios de aceptación:**
 
 * La aplicación deberá visualizarse correctamente en computadores de escritorio.
-* Los elementos principales no deberán superponerse.
+* La interfaz deberá adaptarse de forma básica a pantallas de menor tamaño.
+* Los elementos principales no deberán  desbordarse ni superponerse.
 * La información deberá continuar siendo legible cuando cambie el tamaño de la ventana.
 * El diseño podrá evolucionar posteriormente hacia una adaptación más completa para dispositivos móviles.
 
@@ -146,3 +151,5 @@ El código y la documentación del proyecto deberán mantenerse bajo control de 
 * Los mensajes de commit deberán describir el cambio realizado.
 * El repositorio remoto deberá mantenerse actualizado en GitHub.
 * La documentación deberá versionarse junto con el código fuente.
+* Los mensajes de commit deberán escribirse en español y en modo imperativo.
+* Los commits deberán procurar representar unidades de trabajo claras y coherentes.
