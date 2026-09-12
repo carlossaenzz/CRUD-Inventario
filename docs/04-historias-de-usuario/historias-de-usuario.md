@@ -34,6 +34,7 @@ Cada historia se relaciona con un requisito funcional y un caso de uso previamen
 * La cuenta se almacena correctamente.
 * El sistema muestra un mensaje de registro exitoso.
 * Después del registro, el usuario puede iniciar sesión.
+* El correo electrónico no puede estar registrado previamente.
 
 ---
 
@@ -73,6 +74,8 @@ Cada historia se relaciona con un requisito funcional y un caso de uso previamen
 ### Criterios de aceptación
 
 * El dashboard se muestra después de iniciar sesión.
+* El dashboard solo puede utilizarse cuando existe una sesión activa.
+* Si no existe una sesión activa, el usuario es dirigido a la pantalla de inicio de sesión.
 * Se muestran accesos a las principales funcionalidades.
 * El usuario puede acceder al módulo de productos.
 * Se muestra información básica relacionada con el inventario.
