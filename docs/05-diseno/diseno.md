@@ -2,7 +2,7 @@
 
 ## 1. Introducción
 
-La etapa de diseño permite definir cómo se organizará y presentará el sistema CRUD Inventario antes de comenzar su implementación.
+La etapa de diseño permite definir y refinar cómo se organizará y presentará el sistema CRUD Inventario, sirviendo como referencia durante su implementación y evolución.
 
 El diseño se construirá progresivamente a partir de los requisitos, casos de uso e historias de usuario definidos para la versión 1.0.
 
