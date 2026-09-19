@@ -73,8 +73,12 @@ Estas evidencias permitirán documentar errores encontrados y comprobar posterio
 
 ## 6. Estado actual
 
-**Estado:** planificación de pruebas.
+**Estado:** planificación completada y ejecución progresiva de pruebas.
 
-Los casos de prueba se encuentran definidos antes de la implementación del sistema.
+El plan y los casos de prueba de la versión 1.0 se encuentran definidos.
 
-Los resultados serán completados progresivamente cuando las funcionalidades correspondientes sean desarrolladas.
+Las pruebas serán ejecutadas progresivamente conforme las funcionalidades estén implementadas. Actualmente pueden verificarse las funcionalidades relacionadas con registro de usuarios, inicio de sesión, validación de credenciales, manejo de sesión, protección del dashboard y cierre de sesión.
+
+Las pruebas relacionadas con gestión de productos, búsquedas, categorías, existencias y stock bajo permanecerán pendientes hasta que dichas funcionalidades sean desarrolladas.
+
+Los resultados obtenidos y las evidencias correspondientes se registrarán durante la ejecución de cada prueba.

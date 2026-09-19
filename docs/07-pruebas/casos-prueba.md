@@ -20,9 +20,9 @@ El usuario no debe estar registrado.
 El usuario queda registrado y el sistema muestra una confirmación.
 
 **Resultado obtenido:**  
-Pendiente.
+El usuario se registró correctamente y la información quedó almacenada en localStorage
 
-**Estado:** Pendiente.
+**Estado:** Aprobado.
 
 ---
 
@@ -60,9 +60,9 @@ Pendiente.
 El sistema informa que las contraseñas no coinciden.
 
 **Resultado obtenido:**  
-Pendiente.
+El sistema detectó que las contraseñas ingresadas no coincidían e impidió completar el registro.
 
-**Estado:** Pendiente.
+**Estado:** Aprobado.
 
 ---
 
@@ -85,9 +85,9 @@ Debe existir un usuario registrado.
 El usuario accede al dashboard.
 
 **Resultado obtenido:**  
-Pendiente.
+El usuario inició sesión correctamente y fue dirigido al dashboard.
 
-**Estado:** Pendiente.
+**Estado:** Aprobado.
 
 ---
 
@@ -99,7 +99,7 @@ Pendiente.
 El sistema rechaza el acceso y muestra un mensaje de error.
 
 **Resultado obtenido:**  
-Pendiente.
+El sistema rechazó las credenciales incorrectas e impidió el acceso al dashboard.
 
 **Estado:** Pendiente.
 
@@ -384,6 +384,86 @@ Pendiente.
 
 **Resultado esperado:**  
 El sistema impide el acceso y dirige al usuario al inicio de sesión.
+
+**Resultado obtenido:**  
+El sistema detectó que no existía una sesión activa e impidió el acceso al `dashboard`, redirigiendo al usuario al inicio de sesión.
+
+**Estado:** Aprobado.
+
+## CP-22 — Intentar registrar nombre de usuario duplicado
+
+**Requisito:** RF-01  
+**Historia:** HU-01  
+**Caso de uso:** CU-01  
+
+**Precondición:**  
+Debe existir previamente un usuario registrado con el mismo nombre de usuario.
+
+**Pasos:**
+
+1. Abrir la pantalla de registro.
+2. Completar correctamente los campos obligatorios.
+3. Ingresar un nombre de usuario que ya se encuentre registrado.
+4. Ingresar una contraseña y confirmación válidas.
+5. Seleccionar **Registrarse**.
+
+**Resultado esperado:**  
+El sistema impide crear la cuenta e informa que el nombre de usuario ya se encuentra registrado.
+
+**Resultado obtenido:**  
+El sistema detectó que el nombre de usuario ya se encontraba registrado e impidió crear una nueva cuenta con el mismo `username`.
+
+**Estado:** Pendiente.
+
+---
+
+## CP-23 — Intentar registrar correo electrónico duplicado
+
+**Requisito:** RF-01  
+**Historia:** HU-01  
+**Caso de uso:** CU-01  
+
+**Precondición:**  
+Debe existir previamente un usuario registrado con el mismo correo electrónico.
+
+**Pasos:**
+
+1. Abrir la pantalla de registro.
+2. Completar correctamente los campos obligatorios.
+3. Ingresar un correo electrónico que ya se encuentre registrado.
+4. Utilizar un nombre de usuario diferente.
+5. Ingresar una contraseña y confirmación válidas.
+6. Seleccionar **Registrarse**.
+
+**Resultado esperado:**  
+El sistema impide crear la cuenta e informa que el correo electrónico ya se encuentra registrado.
+
+**Resultado obtenido:**  
+El sistema detectó que el correo electrónico ya se encontraba registrado e impidió crear una nueva cuenta utilizando el mismo correo.
+
+**Estado:** Aprobado.
+
+---
+
+## CP-24 — Intentar registrar correo electrónico con formato inválido
+
+**Requisito:** RF-01  
+**Historia:** HU-01  
+**Caso de uso:** CU-01  
+
+**Precondición:**  
+El usuario se encuentra en la pantalla de registro.
+
+**Pasos:**
+
+1. Completar los campos obligatorios del formulario.
+2. Ingresar un correo electrónico con formato inválido.
+3. Ingresar un nombre de usuario disponible.
+4. Ingresar una contraseña y confirmación válidas.
+5. Seleccionar **Registrarse**.
+
+**Resultado esperado:**  
+El sistema impide completar el registro e informa que el correo electrónico ingresado no tiene un formato válido.
 
 **Resultado obtenido:**  
 Pendiente.
