@@ -59,7 +59,7 @@ Incluirá:
 
 ## 3. Estado actual
 
-**Estado:** estructura inicial.
+**Estado:** manuales en desarrollo y actualización progresiva.
 
 Los manuales serán completados progresivamente durante la implementación y las pruebas del sistema.
 

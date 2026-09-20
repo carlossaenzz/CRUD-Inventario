@@ -268,7 +268,7 @@ Será inicialmente la página de entrada al sistema.
 
 Su responsabilidad principal será mostrar el formulario de inicio de sesión.
 
-También deberá permitir navegar hacia el registro de usuario cuando esta funcionalidad sea implementada.
+También permite navegar hacia el registro de usuario.
 
 ---
 
@@ -344,7 +344,7 @@ Contendrá los estilos específicos relacionados con:
 
 Será responsable de la lógica relacionada con usuarios y autenticación local.
 
-Funciones previstas:
+Funciones Implementadas:
 
 - Registrar usuario.
 - Validar formulario de registro.
@@ -889,75 +889,109 @@ git push
 
 ---
 
-# 28. Convención inicial de commits
+# 28. Convención de commits
 
-Se utilizarán mensajes descriptivos.
+Los mensajes de commit del proyecto se escribirán en **español**, utilizando verbos en **modo imperativo** y describiendo de forma clara la acción principal realizada.
 
-## `feat`
+El mensaje debe representar una unidad lógica de trabajo y evitar descripciones demasiado generales.
 
-Nueva funcionalidad.
-
-```text
-feat: implementar registro de productos
-```
-
-## `fix`
-
-Corrección de error.
+## Estructura recomendada
 
 ```text
-fix: evitar codigos de producto duplicados
+Verbo + acción realizada
 ```
 
-## `docs`
-
-Cambios de documentación.
+Ejemplos:
 
 ```text
-docs: actualizar modelo de datos
+Agrega validación de usuarios duplicados
+Corrige cierre de sesión
+Actualiza documentación de pruebas
+Precisa requisitos funcionales de la versión 1.0
+Reorganiza estructura de documentación
 ```
 
-## `style`
+## Verbos utilizados
 
-Cambios visuales que no modifican la lógica.
+### `Agrega`
+
+Se utiliza cuando se incorpora contenido, funcionalidad o archivos nuevos.
+
+Ejemplos:
 
 ```text
-style: mejorar formulario de login
+Agrega formulario de registro
+Agrega validación de correo duplicado
+Agrega casos de prueba de autenticación
 ```
 
-## `refactor`
+### `Corrige`
 
-Reorganización interna sin cambiar comportamiento esperado.
+Se utiliza cuando se soluciona un error o comportamiento incorrecto.
+
+Ejemplos:
 
 ```text
-refactor: separar funciones de almacenamiento
+Corrige validación de credenciales
+Corrige redirección al dashboard
+Corrige iconos del formulario de login
 ```
 
-## `chore`
+### `Actualiza`
 
-Configuración, estructura o tareas de mantenimiento.
+Se utiliza cuando información o contenido existente se lleva a un estado más reciente.
+
+Ejemplos:
 
 ```text
-chore: reorganizar estructura inicial
+Actualiza manual de usuario
+Actualiza documentación de pruebas
+Actualiza estado del proyecto
 ```
 
----
+### `Precisa`
 
-# 29. Repositorio remoto
+Se utiliza cuando se mejora la claridad, exactitud o nivel de detalle de información ya existente.
 
-El repositorio remoto utiliza SSH.
-
-Formato:
+Ejemplos:
 
 ```text
-git@github.com:carlossaenzz/CRUD-Inventario.git
+Precisa requisitos funcionales de la versión 1.0
+Precisa casos de uso
+Precisa la visión y alcance del proyecto
 ```
 
-Para comprobar:
+### `Reorganiza`
+
+Se utiliza cuando se modifica la estructura, ubicación u orden de archivos o contenido sin cambiar necesariamente su propósito.
+
+Ejemplos:
+
+```text
+Reorganiza estructura de documentación
+Reorganiza archivos del módulo de autenticación
+```
+
+## Reglas generales
+
+* Escribir el mensaje en español.
+* Utilizar modo imperativo.
+* Describir la acción principal realizada.
+* Evitar mensajes demasiado generales como `cambios`, `actualización` o `varias cosas`.
+* Agrupar en un mismo commit cambios que formen parte de una misma unidad lógica de trabajo.
+* Evitar crear un commit por cada línea o modificación pequeña.
+* Revisar los cambios con `git status` y `git diff` antes de crear el commit.
+
+## Ejemplo de flujo
 
 ```bash
-git remote -v
+git status
+git diff
+git add .
+git commit -m "Actualiza manuales al estado actual del proyecto"
+git push
 ```
+
 
 ---
 

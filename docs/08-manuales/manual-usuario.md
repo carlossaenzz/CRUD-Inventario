@@ -20,7 +20,7 @@ La versión 1.0 requerirá:
 
 ## 3. Acceso al sistema
 
-**Estado:** pendiente de implementación.
+**Estado:** Implementado.
 
 En esta sección se documentará el proceso para acceder a la pantalla de inicio de sesión.
 
@@ -28,7 +28,7 @@ En esta sección se documentará el proceso para acceder a la pantalla de inicio
 
 ## 4. Registro de usuario
 
-**Estado:** pendiente de implementación.
+**Estado:** Implementado.
 
 Esta sección explicará cómo crear una cuenta dentro del sistema.
 
@@ -43,7 +43,7 @@ Se documentarán:
 
 ## 5. Inicio de sesión
 
-**Estado:** pendiente de implementación.
+**Estado:** Implementado.
 
 Se documentará cómo utilizar las credenciales registradas para acceder al sistema.
 
@@ -51,9 +51,11 @@ Se documentará cómo utilizar las credenciales registradas para acceder al sist
 
 ## 6. Dashboard
 
-**Estado:** pendiente de implementación.
+**Estado:** Implementación parcial.
 
-Se explicarán los elementos disponibles en el panel principal.
+Actualmente el sistema permite acceder al dashboard únicamente cuando existe una sesión activa.
+
+El contenido y las funcionalidades principales del dashboard se completarán progresivamente.
 
 ---
 
