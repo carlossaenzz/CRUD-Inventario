@@ -48,3 +48,11 @@ function obtenerSesion() {
     // Convierte el texto JSON nuevamente en un objeto de JavaScript y lo retorna
     return JSON.parse(sesionGuardada);
 }
+
+/**
+ * Elimina la sesión activa almacenada en localStorage.
+ */
+function eliminarSesion() {
+    // Elimina únicamente la información de la sesión actual
+    localStorage.removeItem(SESSION_KEY);
+}

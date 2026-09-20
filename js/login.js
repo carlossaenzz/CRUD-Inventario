@@ -148,3 +148,23 @@ if (dashboardPage) {
         window.location.href = "../index.html";
     }
 }
+
+// --------------------
+// Cierre de sesión
+// --------------------
+// Obtiene el boton para cerrar sesión
+const logoutButton = document.getElementById("logoutButton");
+
+// Si el boton existe ejecuta esta lógica
+if (logoutButton) {
+
+    // Ejecuta la funcion cuando el usuario haga click en el botón
+    logoutButton.addEventListener("click", function () {
+        // Elimina la sesión actual almacenada mediante la función definida en storage.js
+        eliminarSesion();
+
+        // Redirige al usuario al inicio de sesión
+        window.location.href = "../index.html";
+    });
+}
+
