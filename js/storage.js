@@ -1,14 +1,11 @@
-// *Lógica de almacenamiento en localStorage
-// Definimos la clave para almacenar los usuarios en localStorage
-// Clave con la que identificaremos nuestra información en el almacenamiento local del navegador
+//* Lógica de almacenamiento en localStorage
+// Definimos la clave que utilizaremos para guardar y buscar el dato en localStorage
 const USERS_KEY = 'crudInventario_usuarios';
-
-// Clave utilizada para almacenar el usuario actualmente logueado
 const SESSION_KEY = 'crudInventario_sesion';
 
-// function que obtiene todos los ususarios almacenados en localStorage
+// Obtiene los ususarios guardados en localStorage
 function obtenerUsuarios() {
-    const usuariosGuardados = localStorage.getItem(USERS_KEY);
+    const usuariosGuardados = localStorage.getItem(USERS_KEY); // Obtine el valor guardado con la misma clave
 
     // si existen datos guardados, los convierte nuevamente a un arreglo de javascript
     if (usuariosGuardados) {
@@ -20,28 +17,28 @@ function obtenerUsuarios() {
 
 }
 
-// function que guarda un arreglo de usuarios en localStorage
+// Guarda un lista(arreglo) de usuarios en localStorage
 function guardarUsuario(usuarios) {
-    // convertimos el arreglo de usuarios a un string JSON para poder almacenarlo en localStorage
+    // convierte el arreglo de usuarios a un string JSON para poder almacenarlo en localStorage
     const usuariosJSON = JSON.stringify(usuarios);
 
-    // guardamos el arreglo de usuarios en localStorage bajo la clave definida
+    // guarda el arreglo de usuarios en localStorage bajo la clave definida
     localStorage.setItem(USERS_KEY, usuariosJSON);
 }
 
 // Function que guarda la sesión del usuario logueado en localStorage
 function guardarSesion(sesion) {
-    // Convertimos el objeto sesion a un string JSON para poder almacenarlo en localStorage
+    // Convierte el objeto sesion a un string JSON para poder almacenarlo en localStorage
     const sesionJSON = JSON.stringify(sesion);
-    // Guardamos la sesión en localStorage bajo la clave definida
+    // Guarda la sesión en localStorage bajo la clave definida
     localStorage.setItem(SESSION_KEY, sesionJSON);
 }
 
-// Function que obtiene la sesión activa almacenada en localStorage
+// Obtiene la sesión activa guardada en localStorage
 function obtenerSesion() {
-    // Obtiene la sesión alamacenada como texto JSON desde localStorage usando la clave definida
+    // Obtiene la sesión guardada como texto JSON desde localStorage usando la clave definida
     const sesionGuardada = localStorage.getItem(SESSION_KEY);
-    // Si no existe niguna sesión guardada, retorna null
+    // Si no existe ninguna sesión guardada, retorna null
     if (!sesionGuardada) {
         return null;
     }
@@ -49,10 +46,7 @@ function obtenerSesion() {
     return JSON.parse(sesionGuardada);
 }
 
-/**
- * Elimina la sesión activa almacenada en localStorage.
- */
+// Elimina la sesión activa guardada en localStorage.
 function eliminarSesion() {
-    // Elimina únicamente la información de la sesión actual
-    localStorage.removeItem(SESSION_KEY);
+    localStorage.removeItem(SESSION_KEY); // Elimina únicamente la información de la sesión actual
 }
