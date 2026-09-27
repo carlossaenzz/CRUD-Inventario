@@ -15,7 +15,7 @@ body {
 }
 
 /* Estilos para el login */
-.form__login {
+.login__form {
     background: rgba(255, 255, 255, 0.8); /* Fondo del formulario  */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -26,7 +26,7 @@ body {
 }
 
 /* Título del login */
-.form__title {
+.login__title {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
@@ -35,12 +35,12 @@ body {
 }
 
 /* Estilos para los campos del login */
-.form__input {
+.login__field {
     position: relative;
     margin-bottom: 20px;
 }
 
-.form__label {
+.login__label {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -50,7 +50,7 @@ body {
     background-color: #f9f9f9;
 }
 
-.form__label input {
+.login__input {
     border: none;
     outline: none;
     flex: 1;
@@ -60,7 +60,7 @@ body {
     background-color: transparent;
 }
 
-.form__label i {
+.login__icon {
     font-size: 20px;
     color: #aaa;
     flex-shrink: 0; /* Evita que el icono se reduzca de tamaño */
@@ -68,7 +68,7 @@ body {
 }
 
 /* Estilo del botón */
-.form__btn {
+.login__button {
     width: 100%;
     padding: 10px;
     background-color: #3498db;
@@ -82,24 +82,24 @@ body {
     font-family: inherit; /* Mantener la fuente consistente */
 }
 
-.form__btn:hover {
+.login__button:hover {
     background-color: #35759f;
 }
 
 /* Estilos de los enlaces */
-.form__link {
+.login__link {
     text-align: center;
     margin-top: 10px;
     font-size: 14px;
     color: #333;
 }
 
-.form__link a {
+.login__link a {
     color: #3498db;
     text-decoration: none;
 }
 
-.form__link a:hover {
+.login__link a:hover {
     text-decoration: underline;
 }
 

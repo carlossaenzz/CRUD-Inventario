@@ -164,7 +164,7 @@ if (logoutButton) {
         eliminarSesion();
 
         // Redirige al usuario al inicio de sesión
-        window.location.href = "../index.html";
+        window.location.href = "../login.html";
     });
 }
 

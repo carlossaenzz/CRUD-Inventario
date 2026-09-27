@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- MetaDatos -->
     <meta charset="UTF-8">
@@ -9,13 +10,15 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="../image/logo/favicon2.png" type="image/x-icon">
     <!-- Boxicon -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"> 
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <!-- Título -->
     <title>Gestor De Inventarios | Login De Registro</title>
 </head>
-<body>
-    <main class="register__container">
 
+<body>
+
+    <main class="register__container">
+        <!-- Formulario de registro -->
         <form class="register__form" id="registerForm">
 
             <h1 class="register__title">Registrate</h1>
@@ -27,45 +30,31 @@
                 </label>
 
                 <div class="register__control">
-                    <input 
-                        class="register__input" 
-                        type="text" 
-                        id="nombre" 
-                        name="nombre" 
-                        placeholder="Nombre Completo" 
-                        autocomplete="name" 
-                        required aria-label="Nombre Completo"
-                        >
+                    <input class="register__input" type="text" id="nombre" name="nombre" placeholder="Nombre Completo"
+                        autocomplete="name" required aria-label="Nombre Completo">
 
                     <i class="bx bx-user register__icon"></i>
 
                 </div>
 
-            </div>  
+            </div>
 
             <!-- Campo de correo -->
             <div class="register__field">
-                
+
                 <label class="register__label" for="email">
                     Correo electrónico
                 </label>
 
                 <div class="register__control">
-                    <input
-                        class="register__input"
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="correo@ejemplo.com"
-                        autocomplete="email"
-                        required aria-label="Correo electrónico"
-                    >
+                    <input class="register__input" type="email" id="email" name="email" placeholder="correo@ejemplo.com"
+                        autocomplete="email" required aria-label="Correo electrónico">
 
                     <i class="bx bx-envelope register__icon"></i>
 
                 </div>
 
-            </div>  
+            </div>
 
             <!-- Campo de usuario -->
             <div class="register__field">
@@ -74,20 +63,13 @@
                 </label>
 
                 <div class="register__control">
-                    <input
-                        class="register__input"
-                        type="text"
-                        id="usuario"
-                        name="usuario"
-                        placeholder="Nombre de usuario"
-                        autocomplete="username"
-                        required
-                    >
+                    <input class="register__input" type="text" id="usuario" name="usuario"
+                        placeholder="Nombre de usuario" autocomplete="username" required>
 
                     <i class="bx bx-id-card register__icon"></i>
 
                 </div>
-                
+
             </div>
 
             <!-- Campo de contraseña -->
@@ -97,15 +79,8 @@
                 </label>
 
                 <div class="register__control">
-                    <input
-                        class="register__input"
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Contraseña"
-                        autocomplete="new-password"
-                        required aria-label="Contraseña"
-                    >
+                    <input class="register__input" type="password" id="password" name="password"
+                        placeholder="Contraseña" autocomplete="new-password" required aria-label="Contraseña">
 
                     <i class="bx bx-lock-alt register__icon"></i>
 
@@ -120,15 +95,9 @@
                 </label>
 
                 <div class="register__control">
-                    <input
-                        class="register__input"
-                        type="password"
-                        id="confirmPassword"
-                        name="confirmPassword"
-                        placeholder="Confirmar contraseña"
-                        autocomplete="new-password"
-                        required aria-label="Confirmar contraseña"
-                    >
+                    <input class="register__input" type="password" id="confirmPassword" name="confirmPassword"
+                        placeholder="Confirmar contraseña" autocomplete="new-password" required
+                        aria-label="Confirmar contraseña">
 
                     <i class="bx bx-lock-alt register__icon"></i>
 
@@ -138,10 +107,10 @@
 
             <!-- Botón de registro -->
             <button class="register__button" type="submit">Registrarme</button>
-            
+
             <!-- Volver al login-->
             <p class="register__link">
-                ¿Ya tienes una cuenta? <a href="../index.html" aria-label="Iniciar sesión">Inicia sesión</a>
+                ¿Ya tienes una cuenta? <a href="../login.html" aria-label="Iniciar sesión">Inicia sesión</a>
             </p>
 
         </form>
@@ -154,4 +123,5 @@
     <!-- Script para manejar el almacenamiento en localStorage -->
     <script src="../js/storage.js"></script>
 </body>
+
 </html>
