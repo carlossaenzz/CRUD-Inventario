@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+/* Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #f5f6fa;
+    color: #333;
+}
+
+.dashboard__container {
+    min-height: 100vh;
+    display: flex; /* Organiza el sidebar y el contenido principal horizontalmente */
+}
+
+/* Barra lateral */
+.dashboard__sidebar {
+    width: 240px;
+    min-height: 100vh;
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    background-color: #1f2937;
+    color: #fff;
+}
+
+/* Identidad del sistema */
+.dashboard__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.dashboard__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background-color: #3498db;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.dashboard__name {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* Navegación */
+.dashboard__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dashboard__nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 7px;
+    color: #d1d5db;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dashboard__nav-link i {
+    font-size: 20px;
+}
+
+.dashboard__nav-link:hover {
+    background-color: #374151;
+    color: #fff;
+}
+
+/* Modificador BEM parael enlace activo */
+.dashboard__nav-link--active {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Información del usuario */
+.dashboard__user {
+    margin-top: auto; /* Empuja la sección del usuario hacia abajo */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #374151
+}
+
+.dashboard__user-icon {
+    font-size: 38px;
+}
+
+.dashboard__user-info {
+    display: contents;
+    flex-direction: column;
+}
+
+.dashboard__user-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dashboard__user-role {
+    margin-top: 3px;
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+/* Cierre de sesión */
+.dashboard__logout {
+     margin-top: 16px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: transparent;
+    color: #d1d5db;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dashboard__logout:hover {
+    background-color: #374151;
+    color: #fff;
+}
+
+/* Contenido principal */
+.dashboard__main {
+    flex: 1;
+    min-width: 0;
+    padding: 32px;
+}
