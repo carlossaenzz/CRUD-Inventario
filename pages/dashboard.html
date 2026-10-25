@@ -21,26 +21,26 @@
             <!-- Identidad del sistema -->
             <div class="dashboard__brand">
                 <span class="dashboard__logo">
-                    <i class='bx bx-cube'></i></span>
+                    <i class="bx bx-cube dashboard__logo-icon"></i></span>
                 <span class="dashboard__name">Gestor Inventario</span>
             </div>
 
             <!-- Navegación principal -->
             <nav class="dashboard__nav">
-                <a href="#dashboard" class="dashboard__nav-link dashboard__nav--active">
-                    <i class="bx bx-grid-alt"></i>Dashboard
+                <a href="#dashboard" class="dashboard__nav-link dashboard__nav-link--active">
+                    <i class="bx bx-grid-alt dashboard__nav-icon"></i>Dashboard
                 </a>
                 <a href="#alerts" class="dashboard__nav-link">
-                    <i class="bx bx-error"></i>Alertas
+                    <i class="bx bx-error dashboard__nav-icon"></i>Alertas
                 </a>
                 <a href="#product" class="dashboard__nav-link">
-                    <i class="bx bx-package"></i>Productos
+                    <i class="bx bx-package dashboard__nav-icon"></i>Productos
                 </a>
             </nav>
 
             <!-- Información del usuario -->
-            <div>
-                <i class="bx bx-user-circle dashboard__user-icon"></i>
+            <div class="dashboar__user">
+                <i class="bx bx-user-circle dashboard__user-icon" aria-hidden="true"></i>
 
                 <div class="dashboard__user-info">
                     <span class="dashboard__user-name" id="currentUserName">Usuario</span>
@@ -50,7 +50,7 @@
 
             <!-- Cierre de sesión -->
             <button class="dashboard__logout" id="logoutButton" type="button">
-                <i class="bx bx-log-out"></i>
+                <i class="bx bx-log-out dashboard__logout-icon" aria-hidden="true"></i>
                 Cerrar sesión
             </button>
         </aside>
@@ -71,7 +71,7 @@
 
                 <!-- Más adelante abrirá el modal de registro -->
                 <button class="dashboard__new-product" id="newProdutButton" type="button">
-                    <i class="bx bx-plus"></i> Nuevo producto
+                    <i class="bx bx-plus dashboard__add-icon" aria-hidden="true"></i> Nuevo producto
                 </button>
             </header>
 
@@ -128,8 +128,9 @@
                 <!-- Herramientas de búsqueda y filtrado -->
                 <div class="dashboard__toolbar">
                     <div class="dashboard__search">
-                        <i class="bx bx-search"></i>
-                        <input class="dashboard__search-input" id="productSearch" type="search" placeholder="Buscar por nombre o código">
+                        <i class="bx bx-search dashboard__search-icon" aria-hidden="true"></i>
+                        <input class="dashboard__search-input" id="productSearch" type="search"
+                            placeholder="Buscar por nombre o código" aria-label="Buscar productos por nombre o código">
                     </div>
 
                     <select class="dashboard__filter" id="categoryFilter">
