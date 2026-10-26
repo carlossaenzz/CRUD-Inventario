@@ -6,6 +6,7 @@
 }
 
 html {
+    /* Suaviza el desplazamiento entre las secciones de la página */
     scroll-behavior: smooth;
 }
 
@@ -57,7 +58,7 @@ body {
     font-weight: 700;
 }
 
-/* Navegación */
+/* Navegación principal*/
 .dashboard__nav {
     display: flex;
     flex-direction: column;
@@ -80,7 +81,7 @@ body {
 }
 
 .dashboard__nav-link:hover {
-    background-color: #374151;
+    background-color: #35759f;
     color: #fff;
 }
 
@@ -146,5 +147,69 @@ body {
 .dashboard__main {
     flex: 1;
     min-width: 0;
-    padding: 32px;
+    padding: 22px 55px;
 }
+
+/* Encabezado del dashboard */
+.dashboard__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+/* Texto secundario utilizado en varias secciones */
+.dashboard__subtitle {
+    margin: 0 0 8px;
+    color: #3498db;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.dashboard__title {
+    margin: 0;
+    color: #1f2937;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.dashboard__date {
+    margin: 5px 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.dashboard__welcome {
+    margin: 8px 0;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+/* Botón para registrar un nuevo producto */
+.dashboard__new-product {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 16px;
+    margin-top: 26px;
+    border: none;
+    border-radius: 7px;
+    background-color: #3498db;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dashboard__new-product i {
+    font-size: 20px;
+}
+
+.dashboard__new-product:hover {
+    background-color: #35759f;
+}
+
+/* Resumen del inventario */
