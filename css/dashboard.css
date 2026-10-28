@@ -156,12 +156,12 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     gap: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 15px;
 }
 
 /* Texto secundario utilizado en varias secciones */
 .dashboard__subtitle {
-    margin: 0 0 8px;
+    margin: 0 0 7px;
     color: #3498db;
     font-size: 14px;
     font-weight: 700;
@@ -213,3 +213,44 @@ body {
 }
 
 /* Resumen del inventario */
+.dashboard__summary {
+    margin-bottom: 32px;
+}
+
+.dashboard__section-title {
+    margin: 0 0 16px;
+    color: #1f2937;
+    font-size: 32px;
+}
+
+/* Contenedor de tarjetas */
+.dashboard__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* Tarjeta individual */
+.dashboard__card {
+    padding: 25px;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.dashboard__card-label {
+    display: block;
+    margin-bottom: 12px;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.dashboard__card-value {
+    display: block;
+    color: #1f2937;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* Productos con bajo stock */
