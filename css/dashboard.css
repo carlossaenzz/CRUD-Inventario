@@ -220,7 +220,7 @@ body {
 .dashboard__section-title {
     margin: 0 0 16px;
     color: #1f2937;
-    font-size: 32px;
+    font-size: 18px;
 }
 
 /* Contenedor de tarjetas */
@@ -236,6 +236,7 @@ body {
     background-color: #fff;
     border: 1px solid #e5e7eb;
     border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Agraga una sombra suave a las tarjetas */
 }
 
 .dashboard__card-label {
@@ -254,3 +255,49 @@ body {
 }
 
 /* Productos con bajo stock */
+.dashboard__alerts {
+    margin-bottom: 32px;
+    padding: 24px;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Agrega una sombra suave */
+}
+
+/* Encabezado de la sección de alertas */
+.dashboard__section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+/* Contador de productos con bajo stock */
+.dashboard__alert-count {
+    padding: 6px 10px;
+    border-radius: 20px;
+    background-color: #fef2f2;
+    color: #dc2626;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 18px;
+}
+
+/* Contenedor donde JavaScript mostrará las alertas */
+.dashboard__alert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Mensaje mostrado cuando no existen alertas */
+.dashboard__empty-message {
+    margin: 0;
+    padding: 18px;
+    border: 1px dashed #d1d5db; /* dashed: significa border discontinuo */
+    border-radius: 8px;
+    color: #6b7280;
+    text-align: center;
+    font-size: 14px;
+}
