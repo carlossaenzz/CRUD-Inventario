@@ -85,7 +85,7 @@ body {
     color: #fff;
 }
 
-/* Modificador BEM parael enlace activo */
+/* Modificador BEM para el enlace activo */
 .dashboard__nav-link--active {
     background-color: #3498db;
     color: #fff;
@@ -98,7 +98,7 @@ body {
     align-items: center;
     gap: 10px;
     padding-top: 20px;
-    border-top: 1px solid #374151
+    border-top: 1px solid #374151;
 }
 
 .dashboard__user-icon {
@@ -300,4 +300,78 @@ body {
     color: #6b7280;
     text-align: center;
     font-size: 14px;
+}
+
+/* Catálogo y listado de productos */
+.dashboard__catalog {
+    /* padding: 24px;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); */
+}
+
+/* Herramientas de búsqueda y filtrado */
+.dashboard__toolbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+/* Buscador */
+.dashboard__search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background-color: #f9fafb;
+}
+/* Pseudoclase: resalta el borde cuando el buscador tiene el foco */
+.dashboard__search:focus-within {
+    border-color: #3498db; 
+}
+
+.dashboard__search i {
+    flex-shrink: 0; /* Evita que el icono se encoja */
+    color: #6b7280;
+    font-size: 20px;
+}
+
+.dashboard__search-input {
+    width: 100%;
+    padding: 11px 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #333;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+/* Pseudoelemento: cambia el color del texto del placeholder */
+.dashboard__search-input::placeholder {
+    color: #9ca3af;
+}
+
+/* Filtro por categoria */
+.dashboard__filter {
+    min-width: 190px;
+    padding: 11px 12px;
+    padding-right: ;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dashboard__filter:focus {
+    border-color: #3498db;
 }
