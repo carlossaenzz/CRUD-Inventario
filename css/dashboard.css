@@ -375,3 +375,42 @@ body {
 .dashboard__filter:focus {
     border-color: #3498db;
 }
+
+/* Listado de productos */
+.dashboard__product-list {
+    width: 100%;
+    overflow-x: auto; 
+}
+
+/* Tabla */
+.dashboard__table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.dashboard__table-head {
+    background-color: #f9fafb;
+}
+
+.dashboard__table th,
+.dashboard__table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    font-size: 14px;
+}
+
+.dashboard__table th {
+    color: #4b5563;
+    font-weight: 700;
+}
+
+.dashboard__table td {
+    color: #374151;
+}
+
+/* Efectos visuales sobre cada producto */
+.dashboard__table-body tr:hover {
+    background-color: #f9fafb;
+}
