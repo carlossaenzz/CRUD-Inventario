@@ -304,11 +304,11 @@ body {
 
 /* Catálogo y listado de productos */
 .dashboard__catalog {
-    /* padding: 24px;
+    padding: 24px;
     background-color: #fff;
     border: 1px solid #e5e7eb;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* Herramientas de búsqueda y filtrado */
@@ -413,4 +413,154 @@ body {
 /* Efectos visuales sobre cada producto */
 .dashboard__table-body tr:hover {
     background-color: #f9fafb;
+}
+
+/* Botones del menú responsive */
+/* Ocultos en escritorio */
+.dashboard__menu-button,
+.dashboard__menu-close {
+    display: none; 
+}
+
+/* Diseño Responsive */
+/* pantallas medianas */
+@media (max-width: 1024px) {
+    /* Las tarjeta pasan de cuatro a dos columnas */
+    .dashboard__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets y pantallas pequeñas */
+@media (max-width: 768px) {
+    /* La Barra lateral se oculta fuera de la pantalla */
+    .dashboard__sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 260px;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    /* Modificador BEM que muestra la barra lateral cuando javascript agrega la clase*/
+    .dashboard__sidebar--open {
+        transform: translateX(0);
+    }
+
+    /* Muestra el botón hamburguesa */
+    .dashboard__menu-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Tamaño del botón */
+        width: 30px;
+        height: 30px;
+        margin-bottom: 10px;
+
+        border: none;
+        border-radius: 7px;
+        background-color: #fff;
+        color: #1f2937;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* Bortón para cerrar la barra lateral */
+    .dashboard__menu-close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 18px;
+        right: 16px;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* La navegación vuelve a ser vertical dentro del menú */
+    .dashboard__nav {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    /* Los enlaces pueden repartirse el espacio disponible */
+    .dashboard__nav-link {
+        
+        justify-content: flex-start;
+        min-width: 0;
+    }
+
+    /* El usuario ya no puede ser empujado al final de la pantalla */
+    .dashboard__user {
+        margin-top: auto;
+    }
+
+    /* El encabezado puede reorganizar sus elementos */
+    .dashboard__main {
+        padding: 24px;
+        /* align-items: center; */
+    }
+
+    /* Buscador y filtro pueden ocupar mejor el espacio disponible */
+    .dashboard__toolbar {
+        flex-wrap: wrap;
+    }
+
+    .dashboard__filter {
+        flex: 1;
+    }
+
+} 
+
+/* Celulares */
+@media (max-width: 600px) {
+    /* El encabezado pasa a una sola columna */
+    .dashboard__header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* El botón ocupa todo el ancho disponible */
+    .dashboard__new-product {
+        justify-content: center;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* Las tarjetas pasan a una columna */
+    .dashboard__cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* El buscador y el filtro quedan uno debajo del otro */
+    .dashboard__toolbar{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dashboard__filter {
+        width: 100%;
+    }
+
+    /* Encabezado de alertas en una sola columna */
+    .dashboard__section-header {
+        flex-direction: column;
+    }
+
+    /* Reduce espacios para aprovechar pantallas pequeñas */
+    .dashboard__main {
+        padding: 18px;
+    }
+
+    .dashboard__sidebar {
+        padding: 20px 16px;
+    }
 }
