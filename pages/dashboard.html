@@ -193,12 +193,15 @@
                     <div>
                         <p class="product-modal__subtitle">Inventario</p>
                         <h2 class="product-modal__title">Nuevo producto</h2>
-                        <!-- Botón para cerrar el modal -->
-                        <button class="product-modal__close" id="productModalClose"><i class="bx bx-x"></i></button>
                     </div>
+                    <!-- Botón para cerrar el modal -->
+                    <button class="product-modal__close" id="productModalClose"><i class="bx bx-x"></i></button>
                 </header>
 
+                <!-- Grupo de campos del producto  -->
                 <fieldset class="product-modal__fields">
+                   
+                    <!-- Contenedores de cada label e input -->
                     <!-- Nombre del producto -->
                     <div class="product-modal__field">
                         <label class="product-modal__label" for="productName">Nombre del producto</label>
@@ -224,21 +227,21 @@
                     <div class="product-modal__field">
                         <label class="product-modal__label" for="productPrice">Precio</label>
                         <input class="product-modal__input" type="number" id="productPrice" name="Precio" min="0"
-                            step="0.01" placeholder="Ej: 0" required>
+                            step="0.01" placeholder="0" required>
                     </div>
 
                     <!-- Cantidad -->
                     <div class="product-modal__field">
                         <label class="product-modal__label" for="productQuantity">Cantidad</label>
                         <input class="product-modal__input" type="number" id="productQuantity" name="Cantidad" min="0"
-                            step="1" placeholder="Ej: 0" required>
+                            step="1" placeholder="0" required>
                     </div>
 
                     <!-- Stock mínimo -->
                     <div class="product-modal__field">
-                        <label class="product-modal__label" for="productMinStock">Nombre del producto</label>
+                        <label class="product-modal__label" for="productMinStock">Stock mínimo</label>
                         <input class="product-modal__input" type="number" id="productMinStock" name="StockMinimo"
-                            min="0" step="1" placeholder="Ej: 0" required>
+                            min="0" step="1" placeholder="0" required>
                     </div>
 
                 </fieldset>

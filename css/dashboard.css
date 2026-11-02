@@ -421,6 +421,157 @@ body {
     display: none; 
 }
 
+/* Modal de productos */
+/* Ventana modal para registrar productos */
+.product-modal {
+    width: min(90%, 560px);
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #1f2937;
+}
+
+/* Fondo oscuro que aparece detrás del modal */
+.product-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* Formulario principal del modal */
+.product-modal__form {
+    padding: 24px;
+}
+
+/* Encabezado del formulario */
+.product-modal__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.product-modal__subtitle {
+    margin: 0 0 4px;
+    color: #6b7280;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.product-modal__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Botón para cerrar el modal */
+.product-modal__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 7px;
+    background-color: transparent;
+    color: #4b5563;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.product-modal__close:hover {
+    background-color: #f3f4f6;
+}
+
+/* Grupo de campos del producto */
+.product-modal__fields {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.product-modal__legend {
+    margin-bottom: 16px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Contenedor de cada label e input */
+.product-modal__field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 16px;
+}
+
+.product-modal__label {
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-modal__input {
+    width: 100%;
+    padding: 11px 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    outline: none;
+
+    font-family: inherit;
+    font-size: 14px;
+}
+
+/* Resalta el campo que tiene el foco */
+.product-modal__input:focus {
+    border-color: #3498db;
+}
+
+.product-modal__input::placeholder {
+    color: #9ca3af;
+}
+
+/* Botones inferiores del formulario */
+.product-modal__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.product-modal__button {
+    padding: 10px 16px;
+
+    border: none;
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+/* Variante secundaria: cancelar */
+.product-modal__button--secondary {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.product-modal__button--secondary:hover {
+    background-color: #e5e7eb;
+}
+
+/* Variante principal: guardar producto */
+.product-modal__button--primary {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.product-modal__button--primary:hover {
+    background-color: #35759f;
+}
+
 /* Diseño Responsive */
 /* pantallas medianas */
 @media (max-width: 1024px) {
