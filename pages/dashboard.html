@@ -23,7 +23,8 @@
             <!-- Identidad del sistema -->
             <div class="dashboard__brand">
                 <!-- Botón para cerrar el menú lateral en pantallas pequeñas -->
-                <button class="dashboard__menu-close" id="menuCloseButton" type="button" aria-label="Cerrar menú de navegación">
+                <button class="dashboard__menu-close" id="menuCloseButton" type="button"
+                    aria-label="Cerrar menú de navegación">
                     <i class="bx bx-x"></i>
                 </button>
                 <span class="dashboard__logo">
@@ -181,6 +182,82 @@
             </section>
 
         </main>
+
+        <!-- Modal nuevo producto -->
+        <dialog class="product-modal" id="productModal">
+
+            <!-- Formulario para registrar nuevo producto -->
+            <form class="product-modal__form" id="productForm">
+                <!-- Encabezado del formulario -->
+                <header class="product-modal__header">
+                    <div>
+                        <p class="product-modal__subtitle">Inventario</p>
+                        <h2 class="product-modal__title">Nuevo producto</h2>
+                        <!-- Botón para cerrar el modal -->
+                        <button class="product-modal__close" id="productModalClose"><i class="bx bx-x"></i></button>
+                    </div>
+                </header>
+
+                <fieldset class="product-modal__fields">
+                    <!-- Nombre del producto -->
+                    <div class="product-modal__field">
+                        <label class="product-modal__label" for="productName">Nombre del producto</label>
+                        <input class="product-modal__input" type="text" id="productName" name="Nombre del producto"
+                            placeholder="Ej: Teclado mecánico" required>
+                    </div>
+
+                    <!-- Código -->
+                    <div class="product-modal__field">
+                        <label class="product-modal__label" for="productCode">Código</label>
+                        <input class="product-modal__input" type="text" id="productCode" name="Codigo"
+                            placeholder="Ej: TEC-001" required>
+                    </div>
+
+                    <!-- Categoría -->
+                    <div class="product-modal__field">
+                        <label class="product-modal__label" for="productCategory">Categoría</label>
+                        <input class="product-modal__input" type="text" id="productCategory" name="Categoria"
+                            placeholder="Ej: Periféricos" required>
+                    </div>
+
+                    <!-- Precio -->
+                    <div class="product-modal__field">
+                        <label class="product-modal__label" for="productPrice">Precio</label>
+                        <input class="product-modal__input" type="number" id="productPrice" name="Precio" min="0"
+                            step="0.01" placeholder="Ej: 0" required>
+                    </div>
+
+                    <!-- Cantidad -->
+                    <div class="product-modal__field">
+                        <label class="product-modal__label" for="productQuantity">Cantidad</label>
+                        <input class="product-modal__input" type="number" id="productQuantity" name="Cantidad" min="0"
+                            step="1" placeholder="Ej: 0" required>
+                    </div>
+
+                    <!-- Stock mínimo -->
+                    <div class="product-modal__field">
+                        <label class="product-modal__label" for="productMinStock">Nombre del producto</label>
+                        <input class="product-modal__input" type="number" id="productMinStock" name="StockMinimo"
+                            min="0" step="1" placeholder="Ej: 0" required>
+                    </div>
+
+                </fieldset>
+
+                    <!-- Acciones del formulario -->
+                    <div class="product-modal__actions">
+                        <button class="product-modal__button product-modal__button--secondary" id="cancelProductButton"
+                            type="button">
+                            Cancelar
+                        </button>
+                        <button class="product-modal__button product-modal__button--primary" id="cancelProductButton"
+                            type="submit">
+                            Guardar producto
+                        </button>
+                    </div>
+
+            </form>
+
+        </dialog>
 
     </div>
 
