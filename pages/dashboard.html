@@ -22,9 +22,13 @@
         <aside class="dashboard__sidebar">
             <!-- Identidad del sistema -->
             <div class="dashboard__brand">
+                <!-- Botón para cerrar el menú lateral en pantallas pequeñas -->
+                <button class="dashboard__menu-close" id="menuCloseButton" type="button" aria-label="Cerrar menú de navegación">
+                    <i class="bx bx-x"></i>
+                </button>
                 <span class="dashboard__logo">
                     <i class="bx bx-cube dashboard__logo-icon"></i></span>
-                <span class="dashboard__name">Gestor Inventario</span>
+                <span class="dashboard__name">InventoryPro</span>
             </div>
 
             <!-- Navegación principal -->
@@ -59,6 +63,11 @@
 
         <!-- Contenido principal -->
         <main class="dashboard__main" id="dashboard">
+
+            <!-- Botón para abrir el menú lateral en pantallas pequeñas -->
+            <button class="dashboard__menu-button" id="menuButton" type="button" aria-label="Abrir menú de navegación">
+                <i class="bx bx-menu"></i>
+            </button>
 
             <!-- Encabezado del dashboard-->
             <header class="dashboard__header">
@@ -150,13 +159,13 @@
 
                         <thead class="dashboard__table-head">
                             <!-- Fila de encabezado de la tabla -->
-                            <tr> 
-                            <th>Producto</th>
-                            <th>Categoria</th>
-                            <th>Precio</th>
-                            <th>Stock</th>
-                            <th>Estado</th>
-                            <th>Acciones</th>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Categoria</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
 
@@ -177,8 +186,8 @@
 
     <!-- Scripts de lógica y almacenamiento de la aplicación -->
     <script src="../js/storage.js"></script>
-    <script src="../js/dashboard.js"></script>
     <script src="../js/login.js"></script>
+    <script src="../js/dashboard.js"></script>
 
 </body>
 
