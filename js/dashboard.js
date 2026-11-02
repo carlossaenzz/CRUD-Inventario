@@ -1,5 +1,28 @@
 // Lógica del dashboard
 
+// Modal de nuevo producto
+// Obtiene los elementos necesarios para controlar el modal
+const newProductButton = document.getElementById("newProductButton");
+const productModal = document.getElementById("productModal");
+const productModalClose = document.getElementById("productModalClose");
+const cancelProductButton = document.getElementById("cancelProductButton");
+
+// Verifica que los elementos exixtan antes de agregar los eventos
+if (newProductButton && productModal && productModalClose && cancelProductButton) {
+    // Abre el modal para registrar un nuevo producto
+    newProductButton.addEventListener("click", function () {
+        productModal.showModal();
+    });
+    // cierra el modal desde el botón x
+    productModalClose.addEventListener("click", function () {
+        productModal.close();
+    });
+    // Cierra el modal desde el botón cancelar
+    cancelProductButton.addEventListener("click", function () {
+        productModal.close();
+    });
+}
+
 // Menú lateral responsive
 // Obtiene los elementos de la pagina por su ID
 const menuButton = document.getElementById("menuButton");
