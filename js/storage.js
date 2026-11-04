@@ -1,7 +1,8 @@
-//* Lógica de almacenamiento en localStorage
-// Definimos la clave que utilizaremos para guardar y buscar el dato en localStorage
+// Lógica de almacenamiento en localStorage
+// Claves utilizadas para almacenar la información en localStorage
 const USERS_KEY = 'crudInventario_usuarios';
 const SESSION_KEY = 'crudInventario_sesion';
+const PRODUCTS_KEY = 'crudInventario_productos';
 
 // Obtiene los ususarios guardados en localStorage
 function obtenerUsuarios() {
@@ -49,4 +50,20 @@ function obtenerSesion() {
 // Elimina la sesión activa guardada en localStorage.
 function eliminarSesion() {
     localStorage.removeItem(SESSION_KEY); // Elimina únicamente la información de la sesión actual
+}
+
+// Obtiene los productos almacenados
+function obtenerProductos() {
+    const productosGuardados = localStorage.getItem(PRODUCTS_KEY);
+
+    if (productosGuardados) {
+        return JSON.parse(productosGuardados);
+    }
+    return []
+}
+
+// Guarda el arreglo completo de productos en localStorage
+function guardarProductos(productos) {
+    const productosJSON = JSON.stringify(productos);
+    localStorage.setItem(PRODUCTS_KEY, productosJSON);
 }
