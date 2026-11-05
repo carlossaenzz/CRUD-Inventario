@@ -70,6 +70,9 @@ if (productForm) {
         // Guarda el arreglo completo
         guardarProductos(productos);
 
+        // Actualiza el listado después de guardar
+        mostrarProductos();
+
         // Limpia el formulario después de registro
         productForm.reset()
 
@@ -77,3 +80,29 @@ if (productForm) {
         productModal.close();
     });
 }
+
+// Listado de productos
+// Obtiene el cuerpo de la tabla dondese mostraran los productos
+const productsTableBody = document.getElementById("productsTableBody");
+
+// Muestra en la tabla los productos almacenados
+function mostrarProductos() {
+    const productos = obtenerProductos();
+
+    // Limpia la tabla antesde volver a generar las filas
+    productsTableBody.innerHTML = "";
+
+    // Recorre cada producto almacenado
+    productos.forEach(function (producto) {
+
+        // Crea una fila para el producto
+        const fila = document.createElement("tr");
+        fila.innerHTML = `<td>${producto.nombre}</td> <td>${producto.categoria}</td> <td>${producto.precio}</td> <td>${producto.cantidad}</td> <td>${producto.cantidad <= producto.stockMinimo ? "Stock bajo" : "Disponible"}</td> <td><button type="button">Editar</button> <button type="button">Eliminar</button></td>`;
+
+        // Agrega la fila al cuerpo de la tabla
+        productsTableBody.appendChild(fila);
+    });
+}
+
+// Muestra los productos guardados al cargar el dashboard
+mostrarProductos();
